@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejericicio 2 Michelle Llano</title>
+</head>
+<body>
+    <script>
+        //  Crear la un arreglo de prueba
+        //  Implementar el algoritmo de ordenación 
+        function ordenarnumeros(arreglo) {
+        const resultado = {
+          numeros: []
+        };
+
+    function ordenarElementos(elemento) {
+      if (typeof elemento === "number") {
+        resultado.numeros.push(elemento);
+      } else if (Array.isArray(elemento)) {
+        elemento.forEach(ordenarElementos);
+      }
+    }
+
+    arreglo.forEach(ordenarElementos);
+    for (let i = 0; i < resultado.numeros.length - 1; i++) {
+        for (let j = 0; j < resultado.numeros.length - i - 1; j++) {
+          if (resultado.numeros[j] < resultado.numeros[j + 1]) {
+            const temp = resultado.numeros[j];
+            resultado.numeros[j] = resultado.numeros[j + 1];
+            resultado.numeros[j + 1] = temp;
+          }
+        }
+      }
+
+      return resultado;
+
+   
+  }
+
+  const inicio = ["unacadena", 3, 9, 1, 10, 500, 1, 10, true,];
+  const resultadoOrden= ordenarnumeros(inicio);
+
+  console.log(resultadoOrden);
+
+      </script>
+
+
+
+</body>
+</html>
