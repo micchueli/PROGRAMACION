@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 1 Michelle Llano</title>
+</head>
+<body>
+
+  <script>
+    //  Crear la variable numeroDeElementos
+   let numeroDeElementos = parseInt(prompt("Ingrese un número entero: ")); 
+
+    //  Calcular y mostrar la serie Fibonacci
+    function calcularFibonacci(numeroDeElementos) {
+      let serieFibonacci = [0, 1];
+
+      for (let i = 2; i < numeroDeElementos; i++) {
+        serieFibonacci[i] = serieFibonacci[i - 1] + serieFibonacci[i - 2];
+      }
+
+      return serieFibonacci;
+    }
+
+  
+    let resultado = calcularFibonacci(numeroDeElementos);
+    console.log(resultado);
+  </script>
+
+</body>
+</html>
